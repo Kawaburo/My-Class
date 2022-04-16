@@ -1,13 +1,13 @@
-package Test;
+package Algorithms;
 
 import java.io.*;
 
-public class Test {
-    private FileOutputStream fileOutputStream;
+public class Write {
+    //private FileOutputStream fileOutputStream;
     private String dest;
     private Object object;
 
-    public Test(String dest, Object object) throws FileNotFoundException {
+    public Write(String dest, Object object) throws FileNotFoundException {
         this.dest = dest;
         this.object = object;
 
@@ -15,7 +15,7 @@ public class Test {
 
     {
         try {
-            fileOutputStream = new FileOutputStream(dest);
+            FileOutputStream fileOutputStream = new FileOutputStream(dest);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(object);
         } catch (IOException e) {
