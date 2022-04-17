@@ -1,12 +1,9 @@
 package Start;
 
-import Algorithms.ReadObject;
 import Algorithms.Write;
 import Arrays.MyArray;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.Serializable;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
