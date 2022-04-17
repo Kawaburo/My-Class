@@ -1,26 +1,20 @@
 package Test;
 
+import Arrays.MyArray;
+
 import java.io.*;
 
 public class Test {
-    private FileOutputStream fileOutputStream;
-    private String dest;
-    private Object object;
+    public static void main(String[] args) throws FileNotFoundException {
+        int [] testArray = MyArray.randomArray(10,10);
+        File file = new File("test");
+        PrintWriter printWriter = new PrintWriter(file);
 
-    public Test(String dest, Object object) throws FileNotFoundException {
-        this.dest = dest;
-        this.object = object;
-
-    }
-
-    {
-        try {
-            fileOutputStream = new FileOutputStream(dest);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(object);
-        } catch (IOException e) {
-            System.out.println("File Not Found");
+        for (int i = 0; i < testArray.length; i++) {
+            printWriter.print(testArray[i]+" ");
         }
+        printWriter.close();
+        MyArray.displayArray(testArray);
     }
 
 }

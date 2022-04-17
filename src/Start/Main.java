@@ -1,17 +1,17 @@
 package Start;
 
-import Algorithms.EasyNumber;
+import Algorithms.ReadObject;
+import Algorithms.Write;
 import Arrays.MyArray;
-import Sort.MySort;
-import Test.Test;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Scanner;
 
-public class Main implements Serializable {
-    public static void main(String[] args) {
-        int [] array = MyArray.inOrder(99,1);
-        EasyNumber.easyNumber(array);
+public class Main {
+    public static void main(String[] args) throws FileNotFoundException {
+        String dest = "E:\\java\\My-Class\\files\\newArray";
+        int [] newArray = MyArray.inOrder(69,3);
+        Write.writeArray(dest,newArray);
     }
 }
