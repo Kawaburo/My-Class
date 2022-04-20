@@ -18,17 +18,21 @@ public class EasyNumber {
 
     //проверка массива
     public static void easyNumber(int[] array) {
-        int easyNumber =0,notEasyNumber =0;
+        int easyNumber =0;
+        int notEasyNumber =0;
+
         for (int i = 0; i < array.length; i++) {
-            float floatNumber = array[i];
-            floatNumber = (floatNumber * floatNumber - 1) / 24;
-            if (array[i] == 0 || array[i] == 1 || array[i] == 2 || array[i] == 3) {
+            double y =(double) (array[i]*array[i]-1)/24;
+            float z = (float) (y-(int)y);
+            if (array[i] == 0 || array[i] == 1 || array[i] == 2 || array[i] == 3|| z==0) {
                 easyNumber++;
             }
-            else if (BigDecimal.valueOf(floatNumber).scale() > 2)
-                notEasyNumber++;
-            else easyNumber++;
+            else notEasyNumber++;
         }
-        System.out.println("В массиве "+easyNumber+"простых и "+notEasyNumber+"составных чисел ");
+        System.out.println("В массиве "+easyNumber+" простых и "+notEasyNumber+" составных чисел ");
+
+
     }
+    //новая проверка на простые числа
+
 }
