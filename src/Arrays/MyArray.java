@@ -2,6 +2,12 @@ package Arrays;
 
 public class MyArray {
 
+    String name;
+
+    public String getName() {
+        return name;
+    }
+
     //массив со случайными числами
     public static int[] randomArray(int size, int maxVal) {
         int[] array = new int[size];

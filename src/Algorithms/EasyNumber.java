@@ -17,6 +17,7 @@ public class EasyNumber {
     }
 
     //проверка массива
+    // новая проверка на простые числа
     public static void easyNumber(int[] array) {
         int easyNumber =0;
         int notEasyNumber =0;
@@ -30,9 +31,7 @@ public class EasyNumber {
             else notEasyNumber++;
         }
         System.out.println("В массиве "+easyNumber+" простых и "+notEasyNumber+" составных чисел ");
-
-
     }
-    //новая проверка на простые числа
+
 
 }
